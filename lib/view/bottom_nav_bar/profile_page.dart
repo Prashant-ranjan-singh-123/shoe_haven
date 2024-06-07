@@ -1,9 +1,12 @@
+import 'package:android_intent_plus/android_intent.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:get/get.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
+import 'package:projects/shared/under_development_dialog.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ProfilePage extends StatelessWidget {
   void general_info_edit() {}
@@ -11,6 +14,57 @@ class ProfilePage extends StatelessWidget {
   void contact_detail_edit() {}
 
   void photo_edit() {}
+
+  void _openLinkedin() async {
+    Future<bool> isLinkedInInstalled() async {
+      Uri url = Uri.parse('linkedin://');
+      if (await canLaunchUrl(url)) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+
+    String dt = 'https://www.linkedin.com/in/prashant-ranjan-singh-b9b6b9217/';
+    bool isInstalled = await isLinkedInInstalled();
+    if (isInstalled != false) {
+      AndroidIntent intent = AndroidIntent(action: 'action_view', data: dt);
+      await intent.launch();
+    } else {
+      Uri url = Uri.parse(dt);
+      if (await canLaunchUrl(url)) {
+        await launchUrl(url);
+      } else {
+        throw 'Could not launch $url';
+      }
+    }
+  }
+
+  void _openGithub() async {
+    Future<bool> isGithubInInstalled() async {
+      Uri url = Uri.parse('github://');
+      if (await canLaunchUrl(url)) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+
+    String dt =
+        'https://github.com/Prashant-ranjan-singh-123/shoe_haven';
+    bool isInstalled = await isGithubInInstalled();
+    if (isInstalled != false) {
+      AndroidIntent intent = AndroidIntent(action: 'action_view', data: dt);
+      await intent.launch();
+    } else {
+      Uri url = Uri.parse(dt);
+      if (await canLaunchUrl(url)) {
+        await launchUrl(url);
+      } else {
+        throw 'Could not launch $url';
+      }
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -32,13 +86,13 @@ class ProfilePage extends StatelessWidget {
                         'General Information', CupertinoIcons.profile_circled)
                     .animate()
                     .flip(
-                    delay: 450.ms,
-                    duration: 500.ms,
-                    curve: Curves.decelerate)
+                        delay: 450.ms,
+                        duration: 500.ms,
+                        curve: Curves.decelerate)
                     .fadeIn(
-                    delay: 450.ms,
-                    duration: 1000.ms,
-                    curve: Curves.decelerate),
+                        delay: 450.ms,
+                        duration: 1000.ms,
+                        curve: Curves.decelerate),
                 const SizedBox(
                   height: 20,
                 ),
@@ -224,52 +278,70 @@ class ProfilePage extends StatelessWidget {
                 const SizedBox(
                   height: 20,
                 ),
-                settingsCardWidget(context,
-                    title: 'Contribute To Project',
-                    trailing: Image.asset(
-                      'assets/image/github.png',
-                      color: Colors.white,
-                    )).animate()
+                settingsCardWidget(context, title: 'Contribute To Project',
+                        onTap: () {
+                  _openGithub();
+                },
+                        trailing: Image.asset(
+                          'assets/image/github.png',
+                          color: Colors.white,
+                        ))
+                    .animate()
                     .flip(
-                    delay: 1350.ms, duration: 500.ms, curve: Curves.decelerate)
+                        delay: 1350.ms,
+                        duration: 500.ms,
+                        curve: Curves.decelerate)
                     .fadeIn(
-                    delay: 1350.ms,
-                    duration: 1000.ms,
-                    curve: Curves.decelerate),
-
+                        delay: 1350.ms,
+                        duration: 1000.ms,
+                        curve: Curves.decelerate),
                 settingsCardWidget(context,
-                    title: 'Connect On Linkedin',
-                    trailing: Image.asset(
-                      'assets/image/linkedin.png',
-                    )).animate()
+                        title: 'Connect On Linkedin',
+                        onTap: () {
+                          _openLinkedin();
+                        },
+                        trailing: Image.asset(
+                          'assets/image/linkedin.png',
+                        ))
+                    .animate()
                     .flip(
-                    delay: 1400.ms, duration: 500.ms, curve: Curves.decelerate)
+                        delay: 1400.ms,
+                        duration: 500.ms,
+                        curve: Curves.decelerate)
                     .fadeIn(
-                    delay: 1400.ms,
-                    duration: 1000.ms,
-                    curve: Curves.decelerate),
-
+                        delay: 1400.ms,
+                        duration: 1000.ms,
+                        curve: Curves.decelerate),
                 settingsCardWidget(
                   context,
                   title: 'Report A Bug',
+                  onTap: (){
+                    Development.showDialogBox();
+                  },
                   trailing: const Icon(
                     CupertinoIcons.ant_fill,
                     color: Colors.white,
-                  ).animate()
+                  )
+                      .animate()
                       .flip(
-                      delay: 1450.ms, duration: 500.ms, curve: Curves.decelerate)
+                          delay: 1450.ms,
+                          duration: 500.ms,
+                          curve: Curves.decelerate)
                       .fadeIn(
-                      delay: 1450.ms,
-                      duration: 1000.ms,
-                      curve: Curves.decelerate),
+                          delay: 1450.ms,
+                          duration: 1000.ms,
+                          curve: Curves.decelerate),
                 ),
-                thank_you().animate()
+                thank_you()
+                    .animate()
                     .flip(
-                    delay: 1500.ms, duration: 500.ms, curve: Curves.decelerate)
+                        delay: 1500.ms,
+                        duration: 500.ms,
+                        curve: Curves.decelerate)
                     .fadeIn(
-                    delay: 1500.ms,
-                    duration: 1000.ms,
-                    curve: Curves.decelerate)
+                        delay: 1500.ms,
+                        duration: 1000.ms,
+                        curve: Curves.decelerate)
               ],
             ),
           ),

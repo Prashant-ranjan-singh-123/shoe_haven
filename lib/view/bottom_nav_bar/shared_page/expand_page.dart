@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:get/get.dart';
+import 'package:projects/view/bottom_nav_bar/shared_page/added_to_cart_page.dart';
 import 'package:slide_to_act/slide_to_act.dart';
 
 class ExpandItemPage extends StatefulWidget {
@@ -261,7 +262,9 @@ class _ExpandItemPageState extends State<ExpandItemPage> {
           fontSize: 20),
       borderRadius: 55,
       key: _key,
-      onSubmit: () {},
+      onSubmit: () {
+        Get.to(AddedToCartPage());
+      },
     );
   }
 }

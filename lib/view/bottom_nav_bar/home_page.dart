@@ -9,6 +9,7 @@ import 'package:get/get_navigation/get_navigation.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:projects/shared/isFirstRunConfig.dart';
 import 'package:projects/shared/tutorial_coach_screens.dart';
+import 'package:projects/shared/under_development_dialog.dart';
 import 'package:projects/view/bottom_nav_bar/shared_page/expand_page.dart';
 import 'package:tutorial_coach_mark/tutorial_coach_mark.dart';
 
@@ -124,6 +125,7 @@ class _HomeScreenState extends State<HomeScreen> {
   final GlobalKey _types= GlobalKey();
   final GlobalKey _items= GlobalKey();
 
+  TextEditingController _con = TextEditingController();
 
   void target_focus_add (){
     targets.add(
@@ -211,13 +213,13 @@ class _HomeScreenState extends State<HomeScreen> {
       children: [
         Expanded(
             child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10),
+          padding: EdgeInsets.symmetric(horizontal: 10),
           child: Card(
             key: _search_key,
             shape:
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
-            color: const Color.fromRGBO(223, 223, 223, 1),
-            child: const Column(
+            color: Color.fromRGBO(223, 223, 223, 1),
+            child: Column(
               children: [
                 SizedBox(
                   height: 5,
@@ -229,6 +231,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         fontSize: 20,
                         fontFamily: 'OpenSans',
                         fontWeight: FontWeight.w700),
+                    controller: _con,
                     decoration: InputDecoration(
                         border: InputBorder.none,
                         hintText: 'Search',
@@ -237,7 +240,12 @@ class _HomeScreenState extends State<HomeScreen> {
                         prefixIcon: Icon(
                           CupertinoIcons.search,
                           color: Color.fromRGBO(108, 106, 106, 1),
-                        )),
+                        )
+                    ),
+                    onChanged: (_){
+                      _con.text='';
+                      Development.showDialogBox();
+                    },
                   ),
                 ),
               ],
@@ -255,7 +263,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 color: const Color.fromRGBO(223, 223, 223, 1),
               ),
               child: IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Development.showDialogBox();
+                },
                 icon: const Icon(Icons.camera_alt,
                     size: 30, color: Color.fromRGBO(108, 106, 106, 1)),
               )),
@@ -270,7 +280,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 color: const Color.fromRGBO(223, 223, 223, 1),
               ),
               child: IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  Development.showDialogBox();
+                },
                 icon: Icon(MdiIcons.shoeFormal,
                     size: 30, color: Color.fromRGBO(108, 106, 106, 1)),
               )),
