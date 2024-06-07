@@ -14,7 +14,6 @@ class ShoesApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: Theme(d, child: child),
       home: SplashScreen(),
       // home: ExpandItemPage(),
     );
