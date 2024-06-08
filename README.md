@@ -7,7 +7,7 @@ Flutter Unwrapped unlocks the world of Flutter development on your mobile device
 # Images 🖼️
 
 ## ⚫ Demonstration Video⚫
-<img src="https://raw.githubusercontent.com/Prashant-ranjan-singh-123/kitchen-wizard/master/readme_image/demonstration.gif" width="300">
+<img src="https://raw.githubusercontent.com/Prashant-ranjan-singh-123/shoe_haven/blob/main/readme_stuff/video.gif" width="300">
 
 ## ⚫ App Screens ⚫
 
