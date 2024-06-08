@@ -1,6 +1,8 @@
 # 🖩 ShoeHaven: Mastering the Art 🖩
 
-![App Icon](https://raw.githubusercontent.com/Prashant-ranjan-singh-123/shoe_haven/main/assets/image/icon_1.jpg)
+<div style="display: flex; justify-content: center;">
+    <img src="https://raw.githubusercontent.com/Prashant-ranjan-singh-123/shoe_haven/main/assets/image/icon_1.jpg">
+</div>
 
 Flutter Unwrapped unlocks the world of Flutter development on your mobile device.  This comprehensive app empowers you to learn the fundamentals, build practical skills, and prepare for your Flutter developer journey.  From streamlined installation to free UI kits, Flutter Unwrapped equips you for success.
 
