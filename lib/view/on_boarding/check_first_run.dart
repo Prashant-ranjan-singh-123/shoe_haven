@@ -1,7 +1,7 @@
+import 'package:ShoeHaven/view/on_boarding/page_view_config.dart';
 import 'package:flutter/material.dart';
-import 'package:projects/shared/isFirstRunConfig.dart';
-import 'package:projects/view/on_boarding/page_view_config.dart';
 
+import '../../shared/isFirstRunConfig.dart';
 import '../bottom_nav_bar/bottom_nav_bar.dart';
 
 class OnboardingOrMainScreen extends StatelessWidget {
@@ -24,8 +24,8 @@ class OnboardingOrMainScreen extends StatelessWidget {
               if (isFirstRunVar) {
                 return const OnBoardingScreen();
               } else {
-                // return const OnBoardingScreen();
-                return const BottomNavBar();
+                return const OnBoardingScreen();
+                // return const BottomNavBar();
               }
             }
           }

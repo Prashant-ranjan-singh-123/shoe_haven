@@ -1,7 +1,7 @@
+import 'package:ShoeHaven/view/on_boarding/page_view_show.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:projects/view/on_boarding/page_view_show.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import '../bottom_nav_bar/bottom_nav_bar.dart';

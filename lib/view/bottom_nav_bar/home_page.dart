@@ -1,3 +1,4 @@
+import 'package:ShoeHaven/view/bottom_nav_bar/shared_page/expand_page.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
@@ -7,11 +8,11 @@ import 'package:flutter_animate/flutter_animate.dart';
 import 'package:get/get.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
-import 'package:projects/shared/isFirstRunConfig.dart';
-import 'package:projects/shared/tutorial_coach_screens.dart';
-import 'package:projects/shared/under_development_dialog.dart';
-import 'package:projects/view/bottom_nav_bar/shared_page/expand_page.dart';
 import 'package:tutorial_coach_mark/tutorial_coach_mark.dart';
+
+import '../../shared/isFirstRunConfig.dart';
+import '../../shared/tutorial_coach_screens.dart';
+import '../../shared/under_development_dialog.dart';
 
 class HomeScreen extends StatefulWidget {
   HomeScreen({super.key});

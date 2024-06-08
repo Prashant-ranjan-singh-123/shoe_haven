@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:get/get.dart';
-import 'package:projects/view/bottom_nav_bar/shared_page/added_to_cart_page.dart';
 import 'package:slide_to_act/slide_to_act.dart';
+
+import 'added_to_cart_page.dart';
 
 class ExpandItemPage extends StatefulWidget {
   String name;
@@ -289,7 +290,7 @@ class _ExpandItemPageState extends State<ExpandItemPage> {
       outerColor: Color.fromRGBO(236, 236, 236, 1),
       textColor: Colors.black,
       text: 'Add to Cart',
-      textStyle: TextStyle(
+      textStyle: const TextStyle(
           color: Colors.black,
           fontWeight: FontWeight.w700,
           fontFamily: 'Poppins',
@@ -297,7 +298,7 @@ class _ExpandItemPageState extends State<ExpandItemPage> {
       borderRadius: 55,
       key: _key,
       onSubmit: () {
-        Get.to(AddedToCartPage());
+        Get.to(const AddedToCartPage());
       },
     );
   }

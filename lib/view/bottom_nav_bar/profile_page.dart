@@ -5,8 +5,9 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:get/get.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
-import 'package:projects/shared/under_development_dialog.dart';
 import 'package:url_launcher/url_launcher.dart';
+
+import '../../shared/under_development_dialog.dart';
 
 class ProfilePage extends StatelessWidget {
   void general_info_edit() {}

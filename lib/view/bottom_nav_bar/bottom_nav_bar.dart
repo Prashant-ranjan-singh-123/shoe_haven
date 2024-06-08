@@ -1,11 +1,12 @@
+import 'package:ShoeHaven/view/bottom_nav_bar/profile_page.dart';
 import 'package:flashy_tab_bar2/flashy_tab_bar2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
-import 'package:projects/view/bottom_nav_bar/cart_page.dart';
-import 'package:projects/view/bottom_nav_bar/favourite_page.dart';
-import 'package:projects/view/bottom_nav_bar/home_page.dart';
-import 'package:projects/view/bottom_nav_bar/profile_page.dart';
+
+import 'cart_page.dart';
+import 'favourite_page.dart';
+import 'home_page.dart';
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({super.key});
