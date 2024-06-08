@@ -16,6 +16,7 @@ class PageViewShow extends StatelessWidget {
   Widget build(BuildContext context) {
     // String imagePath = 'assets/image/onboarding_page1.jpg';
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

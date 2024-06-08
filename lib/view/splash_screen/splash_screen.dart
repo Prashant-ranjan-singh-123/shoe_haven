@@ -18,11 +18,12 @@ class SplashScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     showOnboard();
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset('assets/image/icon.jpg')
+            Image.asset('assets/image/icon_1.jpg')
                 .animate()
                 .fadeIn(duration: 2000.ms)
                 .slideY(duration: 1000.ms, curve: Curves.decelerate),

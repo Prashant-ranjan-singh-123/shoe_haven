@@ -23,7 +23,8 @@ class _BottomNavBarState extends State<BottomNavBar> {
 
       bottomNavigationBar: FlashyTabBar(
         selectedIndex: _selectedIndex,
-        showElevation: true,
+        backgroundColor: Colors.white,
+        showElevation: false,
         animationCurve: Curves.decelerate,
         animationDuration: const Duration(milliseconds: 400),
         onItemSelected: (index) => setState(() {
@@ -55,26 +56,26 @@ class _BottomNavBarState extends State<BottomNavBar> {
   
   Widget returnIcon(int index){
     if(index==0){
-      return Icon(MdiIcons.homeVariantOutline, size: 30, color: Colors.black26,);
+      return Icon(MdiIcons.homeVariantOutline, size: 20, color: Colors.black26,);
     }else if (index ==1){
-      return const Icon(Icons.shopping_cart_outlined, size: 30, color: Colors.black26,);
+      return const Icon(Icons.shopping_cart_outlined, size: 20, color: Colors.black26,);
     } else if (index == 2){
-      return Icon(MdiIcons.heartOutline, size: 30, color: Colors.black26,);
+      return Icon(MdiIcons.heartOutline, size: 20, color: Colors.black26,);
     } else{
-      return const Icon(Icons.person_outline, size: 30, color: Colors.black26,);
+      return const Icon(Icons.person_outline, size: 20, color: Colors.black26,);
     }
   }
 
 
   Widget returnText(int index){
     if(index==0){
-      return const Text('Home', style: TextStyle(color: Colors.black, fontWeight: FontWeight.w700, fontFamily: 'Poppins', fontSize: 20),);
+      return const Text('Home', style: TextStyle(color: Colors.black, fontWeight: FontWeight.w700, fontFamily: 'Poppins', fontSize: 15),);
     }else if (index ==1){
-      return const Text('Cart', style: TextStyle(color: Colors.black, fontWeight: FontWeight.w700, fontFamily: 'Poppins', fontSize: 20),);
+      return const Text('Cart', style: TextStyle(color: Colors.black, fontWeight: FontWeight.w700, fontFamily: 'Poppins', fontSize: 15),);
     } else if (index == 2){
-      return const Text('Favourite', style: TextStyle(color: Colors.black, fontWeight: FontWeight.w700, fontFamily: 'Poppins', fontSize: 20),);
+      return const Text('Favourite', style: TextStyle(color: Colors.black, fontWeight: FontWeight.w700, fontFamily: 'Poppins', fontSize: 15),);
     } else{
-      return const Text('Profile', style: TextStyle(color: Colors.black, fontWeight: FontWeight.w700, fontFamily: 'Poppins', fontSize: 20),);
+      return const Text('Profile', style: TextStyle(color: Colors.black, fontWeight: FontWeight.w700, fontFamily: 'Poppins', fontSize: 15),);
     }
   }
 

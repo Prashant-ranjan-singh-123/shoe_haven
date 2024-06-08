@@ -18,10 +18,8 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
   @override
   Widget build(BuildContext context) {
     final controller = PageController();
-    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
-      statusBarColor: Theme.of(context).colorScheme.primary,
-    ));
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Stack(
         children: [
           SizedBox(
@@ -41,7 +39,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               controller: controller,
               children: [
                 PageViewShow(
-                  image_path: 'assets/image/onboarding_page1.jpg',
+                  image_path: 'assets/image/onboarding_page1.png',
                   heading: 'Categories And Shoes Listing',
                   subtitle:
                       'Welcome to our platform! Simply login with your credentials to access a world of possibilities.',
@@ -124,7 +122,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                   count: 4,
                   effect: const ScrollingDotsEffect(
                       dotColor: Colors.black26,
-                      activeDotColor: Color.fromRGBO(59, 99, 193, 1),
+                      activeDotColor: Colors.black,
                       fixedCenter: true,
                       dotWidth: 7,
                       activeDotScale: 1.1,

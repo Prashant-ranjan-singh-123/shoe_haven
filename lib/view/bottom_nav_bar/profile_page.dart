@@ -69,6 +69,7 @@ class ProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
@@ -420,7 +421,7 @@ class ProfilePage extends StatelessWidget {
             width: MediaQuery.of(context).size.width * 0.9,
             // height: 35,
             decoration: BoxDecoration(
-              color: Color.fromRGBO(223, 223, 223, 1),
+              color: Color.fromRGBO(236, 236, 236, 1),
               borderRadius: BorderRadius.only(
                 topRight: Radius.circular(topRight.toDouble()),
                 topLeft: Radius.circular(topLeft.toDouble()),

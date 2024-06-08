@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:get/get.dart';
 import 'package:projects/view/bottom_nav_bar/shared_page/added_to_cart_page.dart';
@@ -36,116 +37,149 @@ class _ExpandItemPageState extends State<ExpandItemPage> {
 
   bool isFavourite = false;
 
+  bool isLandscape(){
+    if(Get.width>Get.height){
+      return true;
+    }else{
+      return false;
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 15),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              top_back_button_and_like().animate()
-                  .scale(duration: 1000.ms, curve: Curves.decelerate)
-                  .fadeIn(duration: 2000.ms, curve: Curves.decelerate),
-              name_and_image().animate()
-                  .scale(duration: 1000.ms, curve: Curves.decelerate, delay: 400.ms)
-                  .fadeIn(duration: 2000.ms, curve: Curves.decelerate),
-              price().animate()
-                  .scale(duration: 1000.ms, curve: Curves.decelerate, delay: 600.ms)
-                  .fadeIn(duration: 2000.ms, curve: Curves.decelerate, delay: 600.ms),
-              size_selection().animate()
-                  .scale(duration: 1000.ms, curve: Curves.decelerate, delay: 900.ms)
-                  .fadeIn(duration: 2000.ms, curve: Curves.decelerate, delay: 900.ms),
-              SizedBox().animate()
-                  .scale(duration: 1000.ms, curve: Curves.decelerate, delay: 1200.ms)
-                  .fadeIn(duration: 2000.ms, curve: Curves.decelerate, delay: 1200.ms),
-              slide_action().animate()
-                  .scale(duration: 1000.ms, curve: Curves.decelerate, delay: 1500.ms)
-                  .fadeIn(duration: 2000.ms, curve: Curves.decelerate, delay: 1500.ms),
-              SizedBox().animate()
-                  .scale(duration: 1000.ms, curve: Curves.decelerate, delay: 1800.ms)
-                  .fadeIn(duration: 2000.ms, curve: Curves.decelerate, delay: 1800.ms),
-            ],
-          ),
+          child: isLandscape()? landcape_mode() : portrait_mode(),
         ),
       ),
     );
   }
 
-  Widget top_back_button_and_like() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+  Widget landcape_mode(){
+    setState(() {});
+    return Text('OOPs');
+  }
+
+  Widget portrait_mode(){
+    setState(() {});
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        GestureDetector(
-          onTap: () {
-            Get.back();
-          },
-          child: const Icon(
-            CupertinoIcons.back,
-            size: 25,
-          ),
+        top_back_button_and_like().animate()
+            .scale(duration: 1000.ms, curve: Curves.decelerate)
+            .fadeIn(duration: 2000.ms, curve: Curves.decelerate),
+        name_and_image().animate()
+            .scale(duration: 1000.ms, curve: Curves.decelerate, delay: 400.ms)
+            .fadeIn(duration: 2000.ms, curve: Curves.decelerate),
+        price().animate()
+            .scale(duration: 1000.ms, curve: Curves.decelerate, delay: 600.ms)
+            .fadeIn(duration: 2000.ms, curve: Curves.decelerate, delay: 600.ms),
+        size_selection().animate()
+            .scale(duration: 1000.ms, curve: Curves.decelerate, delay: 900.ms)
+            .fadeIn(duration: 2000.ms, curve: Curves.decelerate, delay: 900.ms),
+        SizedBox().animate()
+            .scale(duration: 1000.ms, curve: Curves.decelerate, delay: 1200.ms)
+            .fadeIn(duration: 2000.ms, curve: Curves.decelerate, delay: 1200.ms),
+        slide_action().animate()
+            .scale(duration: 1000.ms, curve: Curves.decelerate, delay: 1500.ms)
+            .fadeIn(duration: 2000.ms, curve: Curves.decelerate, delay: 1500.ms),
+        SizedBox().animate()
+            .scale(duration: 1000.ms, curve: Curves.decelerate, delay: 1800.ms)
+            .fadeIn(duration: 2000.ms, curve: Curves.decelerate, delay: 1800.ms),
+      ],
+    );
+  }
+
+  Widget top_back_button_and_like() {
+    return Column(
+      children: [
+        SizedBox(height: 10,),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Container(
+                height: 40,
+                width: 40,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(5),
+                ),
+                child: IconButton(
+                  onPressed: () {
+                    Get.back();
+                  },
+                  icon: const Icon(CupertinoIcons.back,
+                      size: 25, ),
+                )),
+            isFavourite
+                ? Container(
+                    height: 40,
+                    width: 40,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(5),
+                      color: const Color.fromRGBO(236, 236, 236, 1),
+                    ),
+                    child: IconButton(
+                      onPressed: () {
+                        setState(() {
+                          isFavourite = !isFavourite;
+                        });
+                      },
+                      icon: const Icon(CupertinoIcons.heart_fill,
+                          size: 25, color: Color.fromRGBO(113, 43, 62, 1)),
+                    ))
+                : Container(
+                    height: 40,
+                    width: 40,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(5),
+                      color: const Color.fromRGBO(236, 236, 236, 1),
+                    ),
+                    child: IconButton(
+                      onPressed: () {
+                        setState(() {
+                          isFavourite = !isFavourite;
+                        });
+                      },
+                      icon: const Icon(CupertinoIcons.heart,
+                          size: 25, color: Color.fromRGBO(108, 106, 106, 1)),
+                    ))
+          ],
         ),
-        isFavourite
-            ? Container(
-                height: 40,
-                width: 40,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(5),
-                  color: const Color.fromRGBO(223, 223, 223, 1),
-                ),
-                child: IconButton(
-                  onPressed: () {
-                    setState(() {
-                      isFavourite = !isFavourite;
-                    });
-                  },
-                  icon: const Icon(CupertinoIcons.heart_fill,
-                      size: 25, color: Color.fromRGBO(113, 43, 62, 1)),
-                ))
-            : Container(
-                height: 40,
-                width: 40,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(5),
-                  color: const Color.fromRGBO(223, 223, 223, 1),
-                ),
-                child: IconButton(
-                  onPressed: () {
-                    setState(() {
-                      isFavourite = !isFavourite;
-                    });
-                  },
-                  icon: const Icon(CupertinoIcons.heart,
-                      size: 25, color: Color.fromRGBO(108, 106, 106, 1)),
-                ))
       ],
     );
   }
 
   Widget name_and_image() {
-    return Card(
-      color: Color.fromRGBO(223, 223, 223, 1),
-      child: Padding(
-        padding: const EdgeInsets.only(left: 15.0, top: 10),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            Text(
-              widget.name,
-              style: const TextStyle(
-                  fontSize: 25,
-                  fontWeight: FontWeight.w900,
-                  fontFamily: 'Merriweather'),
-            ),
-            Transform.scale(
-              scale: 1.2,
-              child: Transform.rotate(
-                  angle: -0.6, child: Image.asset(widget.image)),
-            )
-          ],
+    return AspectRatio(
+      aspectRatio: 1/1,
+      child: Card(
+        color: Color.fromRGBO(236, 236, 236, 1),
+        child: Padding(
+          padding: const EdgeInsets.only(left: 15.0, top: 10),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Text(
+                widget.name,
+                style: const TextStyle(
+                    fontSize: 25,
+                    fontWeight: FontWeight.w900,
+                    fontFamily: 'Merriweather'),
+              ),
+              AspectRatio(
+                aspectRatio: 1.2/1,
+                child: Transform.scale(
+                  scale: 1.2,
+                  child: Image.asset(widget.image),
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );
@@ -165,7 +199,7 @@ class _ExpandItemPageState extends State<ExpandItemPage> {
             height: 50,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(5),
-              color: const Color.fromRGBO(223, 223, 223, 1),
+              color: const Color.fromRGBO(236, 236, 236, 1),
             ),
             child: Padding(
               padding: EdgeInsets.all(10.0),
@@ -252,7 +286,7 @@ class _ExpandItemPageState extends State<ExpandItemPage> {
   Widget slide_action() {
     return SlideAction(
       innerColor: Colors.black,
-      outerColor: Color.fromRGBO(223, 223, 223, 1),
+      outerColor: Color.fromRGBO(236, 236, 236, 1),
       textColor: Colors.black,
       text: 'Add to Cart',
       textStyle: TextStyle(

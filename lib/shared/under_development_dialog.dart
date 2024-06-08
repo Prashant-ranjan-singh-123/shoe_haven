@@ -36,7 +36,7 @@ class Development{
   static void showDialogBox() {
     Get.dialog(
       AlertDialog(
-        backgroundColor: Color.fromRGBO(223, 223, 223, 1),
+        backgroundColor: Color.fromRGBO(236, 236, 236, 1),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10.0),
         ),

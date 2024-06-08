@@ -126,6 +126,7 @@ class _HomeScreenState extends State<HomeScreen> {
   final GlobalKey _items= GlobalKey();
 
   TextEditingController _con = TextEditingController();
+  final _focusNode = FocusNode();
 
   void target_focus_add (){
     targets.add(
@@ -161,6 +162,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     // print('length is: ${_categories.length}');
     return Scaffold(
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -209,83 +211,127 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Widget search_button_and_2_icon() {
-    return Row(
+    return Column(
       children: [
-        Expanded(
-            child: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 10),
-          child: Card(
-            key: _search_key,
-            shape:
-                RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
-            color: Color.fromRGBO(223, 223, 223, 1),
-            child: Column(
-              children: [
-                SizedBox(
-                  height: 5,
-                ),
-                Padding(
-                  padding: EdgeInsets.only(right: 20),
-                  child: TextField(
-                    style: TextStyle(
-                        fontSize: 20,
-                        fontFamily: 'OpenSans',
-                        fontWeight: FontWeight.w700),
-                    controller: _con,
-                    decoration: InputDecoration(
-                        border: InputBorder.none,
-                        hintText: 'Search',
-                        hintStyle:
-                            TextStyle(fontSize: 20, fontFamily: 'OpenSans'),
-                        prefixIcon: Icon(
-                          CupertinoIcons.search,
-                          color: Color.fromRGBO(108, 106, 106, 1),
-                        )
+        SizedBox(height: 20,),
+        Row(
+          children: [
+            Expanded(
+                child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 10),
+              child: Container(
+                key: _search_key,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(25), // increased border radius for a softer look
+                  color: const Color.fromRGBO(236, 236, 236, 1), // changed color to white
+                  border: Border.all(color: Colors.grey.withOpacity(0.5), width: 0.5),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.3), // adjusted shadow color and opacity
+                      spreadRadius: 2, // added spread radius for a wider shadow
+                      blurRadius: 5,
+                      offset: Offset(0, 5), // adjusted shadow offset
                     ),
-                    onChanged: (_){
-                      _con.text='';
-                      Development.showDialogBox();
-                    },
+                  ],
+                ),
+                child: Column(
+                  children: [
+                    SizedBox(
+                      height: 5,
+                    ),
+                    Padding(
+                      padding: EdgeInsets.only(right: 20),
+                      child: TextField(
+                        style: TextStyle(
+                            fontSize: 20,
+                            fontFamily: 'OpenSans',
+                            fontWeight: FontWeight.w700),
+                        controller: _con,
+                        focusNode: _focusNode,
+                        decoration: InputDecoration(
+                            border: InputBorder.none,
+                            hintText: 'Search',
+                            hintStyle:
+                                TextStyle(fontSize: 20, fontFamily: 'OpenSans'),
+                            prefixIcon: Icon(
+                              CupertinoIcons.search,
+                              color: Color.fromRGBO(108, 106, 106, 1),
+                            )
+                        ),
+                        onChanged: (_){
+                          _con.clear();
+                          _focusNode.unfocus();
+                          FocusScope.of(context).unfocus();
+                          Development.showDialogBox();
+                        },
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            )),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              child: GestureDetector(
+                onTap: (){
+                  Development.showDialogBox();
+                },
+                child: Container(
+                  key: _search_with_camera,
+                  height: 50,
+                  width: 50,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10), // increased border radius for a softer look
+                    color: const Color.fromRGBO(236, 236, 236, 1), // changed color to white
+                    border: Border.all(color: Colors.grey.withOpacity(0.5), width: 0.5),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.3), // adjusted shadow color and opacity
+                        spreadRadius: 2, // added spread radius for a wider shadow
+                        blurRadius: 5,
+                        offset: Offset(0, 5), // adjusted shadow offset
+                      ),
+                    ],
+                  ),
+                  child: const Icon(
+                      Icons.camera_alt,
+                      size: 30,
+                      color: Color.fromRGBO(108, 106, 106, 1),
+                    ),
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 10),
+              child: GestureDetector(
+                onTap: (){
+                  Development.showDialogBox();
+                },
+                child: Container(
+                  height: 50,
+                  width: 50,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10), // increased border radius for a softer look
+                    color: const Color.fromRGBO(236, 236, 236, 1), // changed color to white
+                    border: Border.all(color: Colors.grey.withOpacity(0.5), width: 0.5),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.grey.withOpacity(0.3), // adjusted shadow color and opacity
+                        spreadRadius: 2, // added spread radius for a wider shadow
+                        blurRadius: 5,
+                        offset: Offset(0, 5), // adjusted shadow offset
+                      ),
+                    ],
+                  ),
+                  child:  Icon(
+                    MdiIcons.shoeFormal,
+                    size: 30,
+                    color: Color.fromRGBO(108, 106, 106, 1),
                   ),
                 ),
-              ],
-            ),
-          ),
-        )),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10),
-          child: Container(
-            key: _search_with_camera,
-              height: 50,
-              width: 50,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(5),
-                color: const Color.fromRGBO(223, 223, 223, 1),
               ),
-              child: IconButton(
-                onPressed: () {
-                  Development.showDialogBox();
-                },
-                icon: const Icon(Icons.camera_alt,
-                    size: 30, color: Color.fromRGBO(108, 106, 106, 1)),
-              )),
-        ),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10),
-          child: Container(
-              height: 50,
-              width: 50,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(5),
-                color: const Color.fromRGBO(223, 223, 223, 1),
-              ),
-              child: IconButton(
-                onPressed: () {
-                  Development.showDialogBox();
-                },
-                icon: Icon(MdiIcons.shoeFormal,
-                    size: 30, color: Color.fromRGBO(108, 106, 106, 1)),
-              )),
+            )
+          ],
         ),
       ],
     );
@@ -325,98 +371,102 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Widget CustomCoursalSclider() {
-    return CarouselSlider(
-      items: [customCard(index: 0), customCard(index: 1), customCard(index: 2)],
-      options: CarouselOptions(
-        // height: height00,
-        aspectRatio: 16 / 9,
-        viewportFraction: 1,
-        initialPage: 0,
-        enableInfiniteScroll: true,
-        reverse: false,
-        autoPlay: true,
-        autoPlayInterval: Duration(seconds: 3),
-        autoPlayAnimationDuration: Duration(milliseconds: 800),
-        autoPlayCurve: Curves.fastOutSlowIn,
-        enlargeCenterPage: true,
-        enlargeFactor: 0.3,
-        onPageChanged: (page, _) {
-          // con.animateToPage(page,
-          //     duration: Duration(milliseconds: 500), curve: Curves.ease);
-        },
-        scrollDirection: Axis.horizontal,
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 30),
+      child: CarouselSlider(
+        items: [customCard(index: 0), customCard(index: 1), customCard(index: 2)],
+        options: CarouselOptions(
+          // height: height00,
+          aspectRatio: 16 / 7,
+          viewportFraction: 1,
+          initialPage: 0,
+          enableInfiniteScroll: true,
+          reverse: false,
+          autoPlay: true,
+          autoPlayInterval: Duration(seconds: 3),
+          autoPlayAnimationDuration: Duration(milliseconds: 800),
+          autoPlayCurve: Curves.fastOutSlowIn,
+          enlargeCenterPage: true,
+          enlargeFactor: 0.3,
+          onPageChanged: (page, _) {
+            // con.animateToPage(page,
+            //     duration: Duration(milliseconds: 500), curve: Curves.ease);
+          },
+          scrollDirection: Axis.horizontal,
+        ),
       ),
     );
   }
 
   Widget customCard({required int index}) {
-    return Stack(
-      children: [
-        Center(
-          child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
-            child: AspectRatio(
-              aspectRatio: 2.4 / 1,
-              child: Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  color: const Color.fromRGBO(223, 223, 223, 1),
-                ),
-                child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(_custom_cursol[index][1],
-                          style: TextStyle(
-                            fontWeight: FontWeight.w900,
-                            fontSize: 23,
-                            fontFamily: 'Merriweather',
-                          )),
-                      const Text('Men\'s Shoes',
-                          style: TextStyle(
-                            fontWeight: FontWeight.w400,
-                            fontSize: 17,
-                            color: Color.fromRGBO(108, 106, 106, 1),
-                            fontFamily: 'Merriweather',
-                          )),
-                      Spacer(),
-                      ElevatedButton(
-                          style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.black,
-                              elevation: 10,
-                              shape: const RoundedRectangleBorder(
-                                  borderRadius:
-                                      BorderRadius.all(Radius.circular(10)))),
-                          onPressed: () {
-                            Get.to(ExpandItemPage(
-                              name: _custom_cursol[index][1],
-                              price: 45.toString(),
-                              image: _custom_cursol[index][0],
-                            ), transition: Transition.fadeIn, duration: 1000.ms);
-                          },
-                          child: const Text(
-                            '     Shop Now     ',
-                            style: TextStyle(color: Colors.white),
-                          ))
-                    ],
+    return Padding(
+      padding:  EdgeInsets.symmetric(horizontal: 20),
+      child: Container(
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10), // increased border radius for a softer look
+          color: const Color.fromRGBO(236, 236, 236, 1), // changed color to white
+          border: Border.all(color: Colors.grey.withOpacity(0.5), width: 0.5),
+        ),
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+          child: Row(
+            children: [
+              Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(_custom_cursol[index][1],
+                      style: TextStyle(
+                        fontWeight: FontWeight.w900,
+                        fontSize: 23,
+                        fontFamily: 'Merriweather',
+                      )),
+                  const Text('Men\'s Shoes',
+                      style: TextStyle(
+                        fontWeight: FontWeight.w400,
+                        fontSize: 17,
+                        color: Color.fromRGBO(108, 106, 106, 1),
+                        fontFamily: 'Merriweather',
+                      )),
+                  Spacer(),
+                  ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.black,
+                          elevation: 10,
+                          shape: const RoundedRectangleBorder(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(10)))),
+                      onPressed: () {
+                        Get.to(ExpandItemPage(
+                          name: _custom_cursol[index][1],
+                          price: 45.toString(),
+                          image: _custom_cursol[index][0],
+                        ), transition: Transition.fadeIn, duration: 200.ms);
+                      },
+                      child: const Text(
+                        '     Shop Now     ',
+                        style: TextStyle(color: Colors.white),
+                      ))
+                ],
+              ),
+              Expanded(
+                child: FittedBox(
+                  fit: BoxFit.contain,
+                  child: Transform.scale(
+                    scale: 1.8,
+                    child: Transform.rotate(
+                      angle: -0.6,
+                      child: Image.asset(
+                        _custom_cursol[index][0],
+                      ),
+                    ),
                   ),
                 ),
-              ),
-            ),
+              )
+            ],
           ),
         ),
-        Align(
-
-            alignment: Alignment(1, 0),
-            child: Container(
-                width: 250,
-                height: 250,
-                child: Image.asset(
-                  _custom_cursol[index][0],
-                )))
-      ],
+      ),
     );
   }
 
@@ -461,6 +511,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     fontWeight: FontWeight.w900,
                     fontSize: 25,
                     fontFamily: 'Merriweather',
+                    color: Color.fromRGBO(108, 106, 106, 1)
                   ),
                 ),
                 Text(
@@ -497,179 +548,143 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Widget grid_view_items() {
     Widget first_item(int index){
-      return Column(
+      return GestureDetector(
         key: _items,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          GestureDetector(
-            onTap: () {
-              Get.to(ExpandItemPage(
-                  name: '${_showcase[index][2]}',
-                  price: '${_showcase[index][1]}',
-                  image: '${_showcase[index][0]}'));
-            },
-            onLongPress: () {
-              setState(() {
-                print('before value: ${_showcase[index][3]}');
-                _showcase[index][3] = !_showcase[index][3];
-                print('after value: ${_showcase[index][3]}');
-              });
-            },
-            child: Stack(
-              children: [
-                Column(
+        onTap: () {
+          Get.to(ExpandItemPage(
+              name: '${_showcase[index][2]}',
+              price: '${_showcase[index][1]}',
+              image: '${_showcase[index][0]}'));
+        },
+        onLongPress: () {
+          setState(() {
+            print('before value: ${_showcase[index][3]}');
+            _showcase[index][3] = !_showcase[index][3];
+            print('after value: ${_showcase[index][3]}');
+          });
+        },
+        child: Column(
+          children: [
+            Card(
+              color: Color.fromRGBO(236, 236, 236, 1),
+              child: Padding(
+                padding: const EdgeInsets.all(5.0),
+                child: Stack(
+                  // crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    AspectRatio(
-                      aspectRatio: 1.40 / 1,
-                      child: Card(
-                        color: Color.fromRGBO(223, 223, 223, 1),
-                        child: Stack(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.all(5.0),
-                              child: _showcase[index][3]
-                                  ? Icon(
-                                MdiIcons.heart,
-                                color: const Color.fromRGBO(
-                                    113, 43, 62, 1),
-                              )
-                                  : Icon(
-                                MdiIcons.heartOutline,
-                                color: const Color.fromRGBO(
-                                    108, 106, 106, 1),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 10),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.stretch,
-                        children: [
-                          Text('${_showcase[index][1]}',
-                              style: const TextStyle(
-                                  fontWeight: FontWeight.w900,
-                                  fontSize: 20,
-                                  fontFamily: 'Poppins')),
-                          Text('${_showcase[index][2]}',
-                              style: const TextStyle(
-                                  fontWeight: FontWeight.w900,
-                                  fontSize: 12,
-                                  color: Color.fromRGBO(108, 106, 106, 1),
-                                  fontFamily: 'Poppins'))
-                        ],
-                      ),
+                    _showcase[index][3]
+                        ? Icon(
+                      MdiIcons.heart,
+                      color: const Color.fromRGBO(
+                          113, 43, 62, 1),
                     )
+                        : Icon(
+                      MdiIcons.heartOutline,
+                      color: const Color.fromRGBO(
+                          108, 106, 106, 1),
+                    ),
+
+                    AspectRatio(aspectRatio: 1/0.8,
+                    child: Transform.scale(
+                      scale: 1.7,
+                      child: Transform.rotate(angle: -0.8,
+                      child: Image.asset(_showcase[index][0])),
+                    ))
                   ],
                 ),
-                Positioned(
-                  width: 200,
-                  height: 200,
-                  top: -30,
-                  child: Transform.rotate(
-                    angle: -0.7045,
-                    child: Transform.scale(
-                      scale: 0.95,
-                      child: Container(
-                          color: Colors.black.withOpacity(0),
-                          child: Image.asset(_showcase[index][0])),
-                    ),
-                  ),
-                )
-              ],
+              ),
             ),
-          )
-        ],
+            Padding(
+              padding: const EdgeInsets.only(left: 10),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  Text('${_showcase[index][1]}',
+                      style: const TextStyle(
+                          fontWeight: FontWeight.w900,
+                          fontSize: 20,
+                          fontFamily: 'Poppins')),
+                  Text('${_showcase[index][2]}',
+                      style: const TextStyle(
+                          fontWeight: FontWeight.w900,
+                          fontSize: 12,
+                          color: Color.fromRGBO(108, 106, 106, 1),
+                          fontFamily: 'Poppins'))
+                ],
+              ),
+            )
+          ],
+        ),
       );
     }
 
     Widget rest_item(int index){
-      return Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          GestureDetector(
-            onTap: () {
-              Get.to(ExpandItemPage(
-                  name: '${_showcase[index][2]}',
-                  price: '${_showcase[index][1]}',
-                  image: '${_showcase[index][0]}'));
-            },
-            onLongPress: () {
-              setState(() {
-                print('before value: ${_showcase[index][3]}');
-                _showcase[index][3] = !_showcase[index][3];
-                print('after value: ${_showcase[index][3]}');
-              });
-            },
-            child: Stack(
-              children: [
-                Column(
+      return GestureDetector(
+        onTap: () {
+          Get.to(ExpandItemPage(
+              name: '${_showcase[index][2]}',
+              price: '${_showcase[index][1]}',
+              image: '${_showcase[index][0]}'));
+        },
+        onLongPress: () {
+          setState(() {
+            print('before value: ${_showcase[index][3]}');
+            _showcase[index][3] = !_showcase[index][3];
+            print('after value: ${_showcase[index][3]}');
+          });
+        },
+        child: Column(
+          children: [
+            Card(
+              color: Color.fromRGBO(236, 236, 236, 1),
+              child: Padding(
+                padding: const EdgeInsets.all(5.0),
+                child: Stack(
+                  // crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    AspectRatio(
-                      aspectRatio: 1.40 / 1,
-                      child: Card(
-                        color: Color.fromRGBO(223, 223, 223, 1),
-                        child: Stack(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.all(5.0),
-                              child: _showcase[index][3]
-                                  ? Icon(
-                                MdiIcons.heart,
-                                color: const Color.fromRGBO(
-                                    113, 43, 62, 1),
-                              )
-                                  : Icon(
-                                MdiIcons.heartOutline,
-                                color: const Color.fromRGBO(
-                                    108, 106, 106, 1),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 10),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.stretch,
-                        children: [
-                          Text('${_showcase[index][1]}',
-                              style: const TextStyle(
-                                  fontWeight: FontWeight.w900,
-                                  fontSize: 20,
-                                  fontFamily: 'Poppins')),
-                          Text('${_showcase[index][2]}',
-                              style: const TextStyle(
-                                  fontWeight: FontWeight.w900,
-                                  fontSize: 12,
-                                  color: Color.fromRGBO(108, 106, 106, 1),
-                                  fontFamily: 'Poppins'))
-                        ],
-                      ),
+                    _showcase[index][3]
+                        ? Icon(
+                      MdiIcons.heart,
+                      color: const Color.fromRGBO(
+                          113, 43, 62, 1),
                     )
+                        : Icon(
+                      MdiIcons.heartOutline,
+                      color: const Color.fromRGBO(
+                          108, 106, 106, 1),
+                    ),
+
+                    AspectRatio(aspectRatio: 1/0.8,
+                        child: Transform.scale(
+                          scale: 1.45,
+                          child: Transform.rotate(angle: -0.8,
+                              child: Image.asset(_showcase[index][0])),
+                        ))
                   ],
                 ),
-                Positioned(
-                  width: 200,
-                  height: 200,
-                  top: -30,
-                  child: Transform.rotate(
-                    angle: -0.7045,
-                    child: Transform.scale(
-                      scale: 0.95,
-                      child: Container(
-                          color: Colors.black.withOpacity(0),
-                          child: Image.asset(_showcase[index][0])),
-                    ),
-                  ),
-                )
-              ],
+              ),
             ),
-          )
-        ],
+            Padding(
+              padding: const EdgeInsets.only(left: 10),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  Text('${_showcase[index][1]}',
+                      style: const TextStyle(
+                          fontWeight: FontWeight.w900,
+                          fontSize: 20,
+                          fontFamily: 'Poppins')),
+                  Text('${_showcase[index][2]}',
+                      style: const TextStyle(
+                          fontWeight: FontWeight.w900,
+                          fontSize: 12,
+                          color: Color.fromRGBO(108, 106, 106, 1),
+                          fontFamily: 'Poppins'))
+                ],
+              ),
+            )
+          ],
+        ),
       );
     }
 
@@ -691,12 +706,14 @@ class _HomeScreenState extends State<HomeScreen> {
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2, // number of items in each row
             mainAxisSpacing: 10.0, // spacing between rows
+            childAspectRatio: 1/1.3,
             crossAxisSpacing: 10.0, // spacing between columns
           ),
           itemBuilder: (context, index) {
             return build_grid_view(index);
           },
-          itemCount: _showcase.length, // Number of items you want to display
+          itemCount: _showcase.length,
+          // itemCount: 1, // Number of items you want to display
         ),
       ),
     );
