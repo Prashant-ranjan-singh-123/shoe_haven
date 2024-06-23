@@ -109,18 +109,7 @@ class ProfilePage extends StatelessWidget {
                         delay: 450.ms,
                         duration: 1000.ms,
                         curve: Curves.decelerate),
-                WidgetCards(
-                        context, 10, 10, 10, 10, 'Date of Birth', '25/05/2002')
-                    .animate()
-                    .flip(
-                        delay: 500.ms,
-                        duration: 500.ms,
-                        curve: Curves.decelerate)
-                    .fadeIn(
-                        delay: 500.ms,
-                        duration: 1000.ms,
-                        curve: Curves.decelerate),
-                WidgetCards(context, 10, 10, 10, 10, 'Age', '22')
+                WidgetCards(context, 10, 10, 10, 10, 'Age', '20')
                     .animate()
                     .flip(
                         delay: 550.ms,
@@ -128,26 +117,6 @@ class ProfilePage extends StatelessWidget {
                         curve: Curves.decelerate)
                     .fadeIn(
                         delay: 550.ms,
-                        duration: 1000.ms,
-                        curve: Curves.decelerate),
-                WidgetCards(context, 10, 10, 10, 10, 'Height', '6\'1')
-                    .animate()
-                    .flip(
-                        delay: 600.ms,
-                        duration: 500.ms,
-                        curve: Curves.decelerate)
-                    .fadeIn(
-                        delay: 650.ms,
-                        duration: 1000.ms,
-                        curve: Curves.decelerate),
-                WidgetCards(context, 10, 10, 10, 10, 'Weight', '75kg')
-                    .animate()
-                    .flip(
-                        delay: 700.ms,
-                        duration: 500.ms,
-                        curve: Curves.decelerate)
-                    .fadeIn(
-                        delay: 700.ms,
                         duration: 1000.ms,
                         curve: Curves.decelerate),
                 heading_with_button('Shoe Sizes', MdiIcons.shoeFormal)
