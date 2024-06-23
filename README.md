@@ -41,6 +41,7 @@
 <a href="https://apt.izzysoft.de/fdroid/index/apk/ru.aleshin.timeplanner" target="_blank">
 
 ## What you get by this app
+- Onboarding Screen UI
 
 ## Technologies stack 🚀
 - GetX State Management 💼
