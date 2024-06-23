@@ -122,8 +122,6 @@ And last but not least: Always write your commit messages in the present tense. 
 
 <br>
 
-<br>
-
 ## Some Screens 📸
 <details>
 <table>
@@ -138,8 +136,11 @@ And last but not least: Always write your commit messages in the present tense. 
 <br>
 ## ⚫ Demonstration Video⚫
 <img src="https://github.com/Prashant-ranjan-singh-123/shoe_haven/blob/main/readme_stuff/video.gif?raw=true" width="300">
-<br>
+
 </details>
+
+
+<br>
 
 ### License
 
