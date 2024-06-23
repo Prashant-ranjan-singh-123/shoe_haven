@@ -42,10 +42,13 @@
 
 ## What you get by this app
 - Onboarding Screen UI
-- Store Application Home Page
+- Amazing Animation Ideas
+- Store Application Listing UI
+- Profile UI
+- Detailed Item UI
+- Added to Cart Screen
 
 ## Technologies stack 🚀
-- GetX State Management 💼
 - Clean Architecture 🏛️
 - Use of Flutter Animations package 🎬
 - iOS and Android Compatible 📱
