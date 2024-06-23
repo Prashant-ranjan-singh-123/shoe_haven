@@ -54,6 +54,19 @@
 - iOS and Android Compatible 📱
 - Landscape Mode Supported 🌄
 - Responsive UI 📱
+<br>
+
+## Some Screens 📱
+<details>
+<table>
+  <tr>
+    <td><img src="https://raw.githubusercontent.com/Prashant-ranjan-singh-123/shoe_haven/main/readme_stuff/1.png" width="499dp"></td>
+    <td><img src="https://raw.githubusercontent.com/Prashant-ranjan-singh-123/shoe_haven/main/readme_stuff/2.png" width="499dp"></td>
+  <tr>
+    <td><img src="https://raw.githubusercontent.com/Prashant-ranjan-singh-123/shoe_haven/main/readme_stuff/6.png" width="499dp"></td>
+    <td><img src="https://raw.githubusercontent.com/Prashant-ranjan-singh-123/shoe_haven/main/readme_stuff/12.png" width="499dp"></td>
+ </table>
+</details>
 
 <br>
 
@@ -119,25 +132,6 @@ Look for a project's contribution instructions. If there are any, follow them.
   your extra branch(es).
 
 And last but not least: Always write your commit messages in the present tense. Your commit message should describe what the commit, when applied, does to the code – not what you did to the code.
-
-<br>
-
-## Some Screens 📸
-<details>
-<table>
-  <tr>
-    <td><img src="https://raw.githubusercontent.com/Prashant-ranjan-singh-123/shoe_haven/main/readme_stuff/1.png" width="499dp"></td>
-    <td><img src="https://raw.githubusercontent.com/Prashant-ranjan-singh-123/shoe_haven/main/readme_stuff/2.png" width="499dp"></td>
-  <tr>
-    <td><img src="https://raw.githubusercontent.com/Prashant-ranjan-singh-123/shoe_haven/main/readme_stuff/6.png" width="499dp"></td>
-    <td><img src="https://raw.githubusercontent.com/Prashant-ranjan-singh-123/shoe_haven/main/readme_stuff/12.png" width="499dp"></td>
- </table>
-
-<br>
-## ⚫ Demonstration Video⚫
-<img src="https://github.com/Prashant-ranjan-singh-123/shoe_haven/blob/main/readme_stuff/video.gif?raw=true" width="300">
-
-</details>
 
 
 <br>
