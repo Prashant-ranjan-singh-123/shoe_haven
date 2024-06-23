@@ -34,7 +34,7 @@
 <p style="text-align: left; font-weight: normal;">Welcome to our sleek and stylish shoe-buying app, built entirely with Flutter. Immerse yourself in a world of modern design and seamless animations as you browse through our collection of footwear. Our frontend is meticulously crafted to deliver an unparalleled user experience, with intuitive navigation and stunning visuals at every turn. But that's not all – we believe in the power of community, which is why our app is open for contributions. Whether you're a seasoned developer or just starting out, you can join us in shaping the future of footwear shopping. Let's build something extraordinary together.</p>
 
 </div>
-</br>
+<br>
 
 ## Download 🔥
 [<img src="https://raw.githubusercontent.com/flocke/andOTP/master/assets/badges/get-it-on-github.png" alt="Get it on Releases" height="80">](https://github.com/Prashant-ranjan-singh-123/shoe_haven/releases/download/apk-02/ShoeHaven.apk)
