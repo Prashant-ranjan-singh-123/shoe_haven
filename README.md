@@ -1,10 +1,10 @@
 <div align="center">
 </br>
-<img src="https://raw.githubusercontent.com/Prashant-ranjan-singh-123/shoe_haven/main/assets/image/icon_1.jpg" width="200" />
+<img src="https://raw.githubusercontent.com/Prashant-ranjan-singh-123/shoe_haven/main/assets/image/app_icon.png" width="200" />
 
 </div>
 
-<h1 align="center">Flutter Unwrapped</h1>
+<h1 align="center">ShoeHaven</h1>
 
 
 <p align="center">
@@ -14,24 +14,24 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Prashant-ranjan-singh-123/flutter-Unwrapped/releases"><img src="https://img.shields.io/github/v/release/Prashant-ranjan-singh-123/flutter-Unwrapped?color=purple&include_prereleases&logo=github&style=for-the-badge"/></a>
-  <a href="https://github.com/Prashant-ranjan-singh-123/flutter-Unwrapped/stargazers"><img src="https://img.shields.io/github/stars/Prashant-ranjan-singh-123/flutter-Unwrapped?color=ffff00&style=for-the-badge"/></a>
-  <a href="https://github.com/Prashant-ranjan-singh-123/flutter-Unwrapped/network/members"><img src="https://img.shields.io/github/forks/Prashant-ranjan-singh-123/flutter-Unwrapped?style=for-the-badge"/></a>
-  <a href="https://hits.sh/github.com/Prashant-ranjan-singh-123/flutter-Unwrapped/"><img alt="Hits" src="https://hits.sh/github.com/Prashant-ranjan-singh-123/flutter-Unwrapped.svg?style=for-the-badge&label=Views&extraCount=10&color=54856b"/></a>
+  <a href="https://github.com/Prashant-ranjan-singh-123/shoe_haven/releases"><img src="https://img.shields.io/github/v/release/Prashant-ranjan-singh-123/shoe_haven?color=purple&include_prereleases&logo=github&style=for-the-badge"/></a>
+  <a href="https://github.com/Prashant-ranjan-singh-123/shoe_haven/stargazers"><img src="https://img.shields.io/github/stars/Prashant-ranjan-singh-123/shoe_haven?color=ffff00&style=for-the-badge"/></a>
+  <a href="https://github.com/Prashant-ranjan-singh-123/shoe_haven/network/members"><img src="https://img.shields.io/github/forks/Prashant-ranjan-singh-123/shoe_haven?style=for-the-badge"/></a>
+  <a href="https://hits.sh/github.com/Prashant-ranjan-singh-123/shoe_haven/"><img alt="Hits" src="https://hits.sh/github.com/Prashant-ranjan-singh-123/shoe_haven.svg?style=for-the-badge&label=Views&extraCount=10&color=54856b"/></a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/Prashant-ranjan-singh-123/flutter-Unwrapped/releases"><img src="https://img.shields.io/github/downloads/Prashant-ranjan-singh-123/flutter-Unwrapped/total?color=orange&style=for-the-badge"/></a>
-  <img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/Prashant-ranjan-singh-123/flutter-Unwrapped?style=for-the-badge&color=ggff20">
-  <a href="https://github.com/Prashant-ranjan-singh-123/flutter-Unwrapped/graphs/contributors"><img src="https://img.shields.io/github/contributors-anon/Prashant-ranjan-singh-123/flutter-Unwrapped?style=for-the-badge&color=ccdd56"/></a>
+  <a href="https://github.com/Prashant-ranjan-singh-123/shoe_haven/releases"><img src="https://img.shields.io/github/downloads/Prashant-ranjan-singh-123/shoe_haven/total?color=orange&style=for-the-badge"/></a>
+  <img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/Prashant-ranjan-singh-123/shoe_haven?style=for-the-badge&color=ggff20">
+  <a href="https://github.com/Prashant-ranjan-singh-123/shoe_haven/graphs/contributors"><img src="https://img.shields.io/github/contributors-anon/Prashant-ranjan-singh-123/shoe_haven?style=for-the-badge&color=ccdd56"/></a>
 </p>
 
 </br>
 
 
-<img src="https://raw.githubusercontent.com/Prashant-ranjan-singh-123/flutter-Unwrapped/master/readme_image/preview.png"/>
+<img src="https://raw.githubusercontent.com/Prashant-ranjan-singh-123/shoe_haven/master/readme_image/preview.png"/>
 
-<p style="text-align: left; font-weight: normal;">Flutter Unwrapped unlocks the world of Flutter development on your mobile device. This comprehensive app empowers you to learn the fundamentals, build practical skills, and prepare for your Flutter developer journey. From streamlined installation to free UI kits, Flutter Unwrapped equips you for success.</p>
+<p style="text-align: left; font-weight: normal;">Welcome to our sleek and stylish shoe-buying app, built entirely with Flutter. Immerse yourself in a world of modern design and seamless animations as you browse through our collection of footwear. Our frontend is meticulously crafted to deliver an unparalleled user experience, with intuitive navigation and stunning visuals at every turn. But that's not all – we believe in the power of community, which is why our app is open for contributions. Whether you're a seasoned developer or just starting out, you can join us in shaping the future of footwear shopping. Let's build something extraordinary together.</p>
 
 </div>
 </br>
@@ -67,7 +67,7 @@ https://flutter.dev/
 
 2. Fetch latest source code from master branch.
 ```
-git clone https://github.com/Prashant-ranjan-singh-123/flutter-Unwrapped.git
+git clone https://github.com/Prashant-ranjan-singh-123/shoe_haven.git
 ```
 
 3. Download Dependency:
@@ -129,14 +129,14 @@ And last but not least: Always write your commit messages in the present tense. 
 ## Some Screens 📸
 <table>
   <tr>
-    <td><img src="https://raw.githubusercontent.com/Prashant-ranjan-singh-123/flutter-Unwrapped/master/readme_image/0.png" width="499dp"></td>
-    <td><img src="https://raw.githubusercontent.com/Prashant-ranjan-singh-123/flutter-Unwrapped/master/readme_image/1.png" width="499dp"></td>
+    <td><img src="https://raw.githubusercontent.com/Prashant-ranjan-singh-123/shoe_haven/main/readme_stuff/1.png" width="499dp"></td>
+    <td><img src="https://raw.githubusercontent.com/Prashant-ranjan-singh-123/shoe_haven/main/readme_stuff/2.png" width="499dp"></td>
   <tr>
-    <td><img src="https://raw.githubusercontent.com/Prashant-ranjan-singh-123/flutter-Unwrapped/master/readme_image/10.png" width="499dp"></td>
-    <td><img src="https://raw.githubusercontent.com/Prashant-ranjan-singh-123/flutter-Unwrapped/master/readme_image/12.png" width="499dp"></td>
+    <td><img src="https://raw.githubusercontent.com/Prashant-ranjan-singh-123/shoe_haven/main/readme_stuff/6.png" width="499dp"></td>
+    <td><img src="https://raw.githubusercontent.com/Prashant-ranjan-singh-123/shoe_haven/main/readme_stuff/9.png" width="499dp"></td>
   <tr>
-    <td><img src="https://raw.githubusercontent.com/Prashant-ranjan-singh-123/flutter-Unwrapped/master/readme_image/13.png" width="499dp"></td>
-    <td><img src="https://raw.githubusercontent.com/Prashant-ranjan-singh-123/flutter-Unwrapped/master/readme_image/14.png" width="499dp"></td>
+    <td><img src="https://raw.githubusercontent.com/Prashant-ranjan-singh-123/shoe_haven/main/readme_stuff/10.png" width="499dp"></td>
+    <td><img src="https://raw.githubusercontent.com/Prashant-ranjan-singh-123/shoe_haven/main/readme_stuff/11.png" width="499dp"></td>
  </table>
 
 ### License
