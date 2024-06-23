@@ -41,8 +41,6 @@
 <a href="https://apt.izzysoft.de/fdroid/index/apk/ru.aleshin.timeplanner" target="_blank">
 
 ## What you get by this app
-* Flutter Interview Questions ❓
-* Flutter & Dart Concepts 📚
 * Writing First Flutter Application 🖋️
 * Widgets explain with UI 🎨
 * Explore UIs (Open-Source) 🌐
