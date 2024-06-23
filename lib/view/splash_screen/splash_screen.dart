@@ -23,7 +23,7 @@ class SplashScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset('assets/image/icon_1.jpg')
+            Image.asset('assets/image/app_icon.png')
                 .animate()
                 .fadeIn(duration: 2000.ms)
                 .slideY(duration: 1000.ms, curve: Curves.decelerate),
