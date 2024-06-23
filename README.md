@@ -42,6 +42,7 @@
 
 ## What you get by this app
 - Onboarding Screen UI
+- Store Application Home Page
 
 ## Technologies stack 🚀
 - GetX State Management 💼
