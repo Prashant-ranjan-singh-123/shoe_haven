@@ -67,25 +67,25 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               ],
             ),
           ),
-          Align(
-            alignment: const Alignment(0, 0.9),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                if (!isLast)
-                  InkWell(
-                      onTap: () {
-                        controller.jumpToPage(3);
-                      },
-                      child: Container(
-                        height: 40,
-                        decoration: const BoxDecoration(
-                            // color: Theme.of(context).colorScheme.primary,
-                            borderRadius: BorderRadius.only(
-                                topRight: Radius.circular(5),
-                                bottomRight: Radius.circular(5))),
-                        child: const Padding(
-                          padding: EdgeInsets.only(right: 20, left: 20),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 35),
+            child: Align(
+              alignment: const Alignment(0, 0.9),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  if (!isLast)
+                    InkWell(
+                        onTap: () {
+                          controller.jumpToPage(3);
+                        },
+                        child: Container(
+                          height: 40,
+                          decoration: const BoxDecoration(
+                              // color: Theme.of(context).colorScheme.primary,
+                              borderRadius: BorderRadius.only(
+                                  topRight: Radius.circular(5),
+                                  bottomRight: Radius.circular(5))),
                           child: Center(
                             child: Text(
                               'Skip',
@@ -95,18 +95,15 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                                   fontWeight: FontWeight.w600),
                             ),
                           ),
-                        ),
-                      ))
-                else
-                  Container(
-                    height: 40,
-                    decoration: const BoxDecoration(
-                        // color: Theme.of(context).colorScheme.background,
-                        borderRadius: BorderRadius.only(
-                            topRight: Radius.circular(5),
-                            bottomRight: Radius.circular(5))),
-                    child: const Padding(
-                      padding: EdgeInsets.only(right: 20, left: 20),
+                        ))
+                  else
+                    Container(
+                      height: 40,
+                      decoration: const BoxDecoration(
+                          // color: Theme.of(context).colorScheme.background,
+                          borderRadius: BorderRadius.only(
+                              topRight: Radius.circular(5),
+                              bottomRight: Radius.circular(5))),
                       child: Center(
                         child: Text('Skip',
                             style: TextStyle(
@@ -116,34 +113,31 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                                 fontWeight: FontWeight.w600)),
                       ),
                     ),
+                  SmoothPageIndicator(
+                    controller: controller,
+                    count: 4,
+                    effect: const ScrollingDotsEffect(
+                        dotColor: Colors.black26,
+                        activeDotColor: Colors.black,
+                        fixedCenter: true,
+                        dotWidth: 7,
+                        activeDotScale: 1.1,
+                        dotHeight: 7),
                   ),
-                SmoothPageIndicator(
-                  controller: controller,
-                  count: 4,
-                  effect: const ScrollingDotsEffect(
-                      dotColor: Colors.black26,
-                      activeDotColor: Colors.black,
-                      fixedCenter: true,
-                      dotWidth: 7,
-                      activeDotScale: 1.1,
-                      dotHeight: 7),
-                ),
-                if (!isLast)
-                  InkWell(
-                      onTap: () {
-                        controller.nextPage(
-                            duration: const Duration(milliseconds: 400),
-                            curve: Curves.easeIn);
-                      },
-                      child: Container(
-                        height: 40,
-                        decoration: const BoxDecoration(
-                            // color: Theme.of(context).colorScheme.primary,
-                            borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(5),
-                                bottomLeft: Radius.circular(5))),
-                        child: const Padding(
-                          padding: EdgeInsets.only(right: 20, left: 20),
+                  if (!isLast)
+                    InkWell(
+                        onTap: () {
+                          controller.nextPage(
+                              duration: const Duration(milliseconds: 400),
+                              curve: Curves.easeIn);
+                        },
+                        child: Container(
+                          height: 40,
+                          decoration: const BoxDecoration(
+                              // color: Theme.of(context).colorScheme.primary,
+                              borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(5),
+                                  bottomLeft: Radius.circular(5))),
                           child: Center(
                             child: Text(
                               'Next',
@@ -151,23 +145,20 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                                   fontSize: 14, fontFamily: 'OpenSans',fontWeight: FontWeight.w600),
                             ),
                           ),
-                        ),
-                      ))
-                else
-                  InkWell(
-                      onTap: () {
-                        Get.off(const BottomNavBar(),
-                            transition: Transition.fadeIn,
-                            duration: const Duration(seconds: 1));
-                      },
-                      child: Container(
-                        height: 40,
-                        decoration: const BoxDecoration(
-                            borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(5),
-                                bottomLeft: Radius.circular(5))),
-                        child: const Padding(
-                          padding: EdgeInsets.only(right: 18, left: 18),
+                        ))
+                  else
+                    InkWell(
+                        onTap: () {
+                          Get.off(const BottomNavBar(),
+                              transition: Transition.fadeIn,
+                              duration: const Duration(seconds: 1));
+                        },
+                        child: Container(
+                          height: 40,
+                          decoration: const BoxDecoration(
+                              borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(5),
+                                  bottomLeft: Radius.circular(5))),
                           child: Center(
                             child: Text(
                               'Done',
@@ -175,9 +166,9 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                                   fontSize: 14, fontFamily: 'OpenSans',fontWeight: FontWeight.w600),
                             ),
                           ),
-                        ),
-                      ))
-              ],
+                        ))
+                ],
+              ),
             ),
           ),
         ],

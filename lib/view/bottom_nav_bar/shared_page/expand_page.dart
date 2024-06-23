@@ -61,37 +61,78 @@ class _ExpandItemPageState extends State<ExpandItemPage> {
 
   Widget landcape_mode(){
     setState(() {});
-    return Text('OOPs');
+    return SingleChildScrollView(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          space_between_widget(),
+          top_back_button_and_like().animate()
+              .scale(duration: 1000.ms, curve: Curves.decelerate)
+              .fadeIn(duration: 2000.ms, curve: Curves.decelerate),
+          space_between_widget(),
+          name_and_image().animate()
+              .scale(duration: 1000.ms, curve: Curves.decelerate, delay: 400.ms)
+              .fadeIn(duration: 2000.ms, curve: Curves.decelerate),
+          space_between_widget(),
+          price().animate()
+              .scale(duration: 1000.ms, curve: Curves.decelerate, delay: 600.ms)
+              .fadeIn(duration: 2000.ms, curve: Curves.decelerate, delay: 600.ms),
+          space_between_widget(),
+          size_selection().animate()
+              .scale(duration: 1000.ms, curve: Curves.decelerate, delay: 900.ms)
+              .fadeIn(duration: 2000.ms, curve: Curves.decelerate, delay: 900.ms),
+          space_between_widget(),
+          SizedBox().animate()
+              .scale(duration: 1000.ms, curve: Curves.decelerate, delay: 1200.ms)
+              .fadeIn(duration: 2000.ms, curve: Curves.decelerate, delay: 1200.ms),
+          space_between_widget(),
+          slide_action().animate()
+              .scale(duration: 1000.ms, curve: Curves.decelerate, delay: 1500.ms)
+              .fadeIn(duration: 2000.ms, curve: Curves.decelerate, delay: 1500.ms),
+          space_between_widget(),
+          SizedBox().animate()
+              .scale(duration: 1000.ms, curve: Curves.decelerate, delay: 1800.ms)
+              .fadeIn(duration: 2000.ms, curve: Curves.decelerate, delay: 1800.ms),
+        ],
+      ),
+    );
   }
 
   Widget portrait_mode(){
     setState(() {});
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        top_back_button_and_like().animate()
-            .scale(duration: 1000.ms, curve: Curves.decelerate)
-            .fadeIn(duration: 2000.ms, curve: Curves.decelerate),
-        name_and_image().animate()
-            .scale(duration: 1000.ms, curve: Curves.decelerate, delay: 400.ms)
-            .fadeIn(duration: 2000.ms, curve: Curves.decelerate),
-        price().animate()
-            .scale(duration: 1000.ms, curve: Curves.decelerate, delay: 600.ms)
-            .fadeIn(duration: 2000.ms, curve: Curves.decelerate, delay: 600.ms),
-        size_selection().animate()
-            .scale(duration: 1000.ms, curve: Curves.decelerate, delay: 900.ms)
-            .fadeIn(duration: 2000.ms, curve: Curves.decelerate, delay: 900.ms),
-        SizedBox().animate()
-            .scale(duration: 1000.ms, curve: Curves.decelerate, delay: 1200.ms)
-            .fadeIn(duration: 2000.ms, curve: Curves.decelerate, delay: 1200.ms),
-        slide_action().animate()
-            .scale(duration: 1000.ms, curve: Curves.decelerate, delay: 1500.ms)
-            .fadeIn(duration: 2000.ms, curve: Curves.decelerate, delay: 1500.ms),
-        SizedBox().animate()
-            .scale(duration: 1000.ms, curve: Curves.decelerate, delay: 1800.ms)
-            .fadeIn(duration: 2000.ms, curve: Curves.decelerate, delay: 1800.ms),
-      ],
+    return SingleChildScrollView(
+      child: SizedBox(
+        height: Get.height*0.9,
+        width: Get.width,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            top_back_button_and_like().animate()
+                .scale(duration: 1000.ms, curve: Curves.decelerate)
+                .fadeIn(duration: 2000.ms, curve: Curves.decelerate),
+            name_and_image().animate()
+                .scale(duration: 1000.ms, curve: Curves.decelerate, delay: 400.ms)
+                .fadeIn(duration: 2000.ms, curve: Curves.decelerate),
+            price().animate()
+                .scale(duration: 1000.ms, curve: Curves.decelerate, delay: 600.ms)
+                .fadeIn(duration: 2000.ms, curve: Curves.decelerate, delay: 600.ms),
+            size_selection().animate()
+                .scale(duration: 1000.ms, curve: Curves.decelerate, delay: 900.ms)
+                .fadeIn(duration: 2000.ms, curve: Curves.decelerate, delay: 900.ms),
+            SizedBox().animate()
+                .scale(duration: 1000.ms, curve: Curves.decelerate, delay: 1200.ms)
+                .fadeIn(duration: 2000.ms, curve: Curves.decelerate, delay: 1200.ms),
+            slide_action().animate()
+                .scale(duration: 1000.ms, curve: Curves.decelerate, delay: 1500.ms)
+                .fadeIn(duration: 2000.ms, curve: Curves.decelerate, delay: 1500.ms),
+            SizedBox().animate()
+                .scale(duration: 1000.ms, curve: Curves.decelerate, delay: 1800.ms)
+                .fadeIn(duration: 2000.ms, curve: Curves.decelerate, delay: 1800.ms),
+          ],
+        ),
+      ),
     );
   }
 
@@ -301,5 +342,9 @@ class _ExpandItemPageState extends State<ExpandItemPage> {
         Get.to(const AddedToCartPage());
       },
     );
+  }
+
+  Widget space_between_widget(){
+    return const SizedBox(height: 20,);
   }
 }
