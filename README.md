@@ -1,5 +1,5 @@
 <div align="center">
-</br>
+<br>
 <img src="https://raw.githubusercontent.com/Prashant-ranjan-singh-123/shoe_haven/main/assets/image/app_icon.png" width="200" />
 
 </div>
