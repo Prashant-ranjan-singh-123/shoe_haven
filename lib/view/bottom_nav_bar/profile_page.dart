@@ -186,7 +186,7 @@ class ProfilePage extends StatelessWidget {
                   height: 20,
                 ),
                 WidgetCards(context, 10, 10, 10, 10, 'Mobile Number',
-                        '+917067597028')
+                        '+91**********')
                     .animate()
                     .flip(
                         delay: 1050.ms,
@@ -216,7 +216,7 @@ class ProfilePage extends StatelessWidget {
                         delay: 1150.ms,
                         duration: 1000.ms,
                         curve: Curves.decelerate),
-                WidgetCards(context, 10, 10, 10, 10, 'City', 'Indore')
+                WidgetCards(context, 10, 10, 10, 10, 'City', 'Bhopal')
                     .animate()
                     .flip(
                         delay: 1200.ms,
@@ -226,7 +226,7 @@ class ProfilePage extends StatelessWidget {
                         delay: 1200.ms,
                         duration: 1000.ms,
                         curve: Curves.decelerate),
-                WidgetCards(context, 10, 10, 10, 10, 'Pin code', '432018')
+                WidgetCards(context, 10, 10, 10, 10, 'Pin code', '432218')
                     .animate()
                     .flip(
                         delay: 1250.ms,
