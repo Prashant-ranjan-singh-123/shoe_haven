@@ -87,14 +87,14 @@ flutter run
 - [ ] Add Native Splash Screen
 - [ ] Choice Best Icons From any package.
 - [ ] Figma Designer: UI Redesign share.
-- [ ] Make Bubble Static for Splash Screen 
+- [ ] Make Bubble Static for Splash Screen
 - [ ] Change Bottom Nav Bar Flashy Bottom Nav
 - [ ] Redesign UI for Home Screen
 - [ ] Redesign UI for Widgets Screen
 - [ ] Redesign UI for Beginner Level Widget.
 - [ ] Construct ui kit Page
 - [ ] Comment Some repo with flutter UI to add.
-<br>
+  <br>
 
 ## Contributing
 
@@ -119,9 +119,14 @@ Look for a project's contribution instructions. If there are any, follow them.
 - From your fork open a pull request in the correct branch. Target the project's `develop` branch if there is one, else go for `master`!
 - ...
 - Once the pull request is approved and merged you can pull the changes from `upstream` to your local repo and delete
-your extra branch(es).
+  your extra branch(es).
 
 And last but not least: Always write your commit messages in the present tense. Your commit message should describe what the commit, when applied, does to the code – not what you did to the code.
+
+<br>
+
+## ⚫ Demonstration Video⚫
+<img src="https://github.com/Prashant-ranjan-singh-123/shoe_haven/blob/main/readme_stuff/video.gif?raw=true" width="300">
 
 <br>
 
