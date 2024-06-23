@@ -26,14 +26,14 @@
   <a href="https://github.com/Prashant-ranjan-singh-123/shoe_haven/graphs/contributors"><img src="https://img.shields.io/github/contributors-anon/Prashant-ranjan-singh-123/shoe_haven?style=for-the-badge&color=ccdd56"/></a>
 </p>
 
-</br>
+<br>
 
 
 <img src="https://raw.githubusercontent.com/Prashant-ranjan-singh-123/shoe_haven/main/readme_stuff/feature_graphic.png"/>
 
 <p style="text-align: left; font-weight: normal;">Welcome to our sleek and stylish shoe-buying app, built entirely with Flutter. Immerse yourself in a world of modern design and seamless animations as you browse through our collection of footwear. Our frontend is meticulously crafted to deliver an unparalleled user experience, with intuitive navigation and stunning visuals at every turn. But that's not all – we believe in the power of community, which is why our app is open for contributions. Whether you're a seasoned developer or just starting out, you can join us in shaping the future of footwear shopping. Let's build something extraordinary together.</p>
 
-</div>
+<div>
 <br>
 
 ## Download 🔥
@@ -216,7 +216,7 @@ Welcome to our sleek and stylish shoe-buying app, built entirely with Flutter. I
     <img src="https://raw.githubusercontent.com/Prashant-ranjan-singh-123/shoe_haven/main/readme_stuff/11.png" style="width: 200px; margin: 10px;">
     <img src="https://raw.githubusercontent.com/Prashant-ranjan-singh-123/shoe_haven/main/readme_stuff/12.png" style="width: 200px; margin: 10px;">
     <img src="https://raw.githubusercontent.com/Prashant-ranjan-singh-123/shoe_haven/main/readme_stuff/13.png" style="width: 200px; margin: 10px;">
-</div>
+</div></div>
 
 ## 🙋 Support
 
