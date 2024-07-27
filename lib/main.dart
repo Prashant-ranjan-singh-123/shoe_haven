@@ -3,9 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
+
 void main() {
   runApp(const ShoesApp());
 }
+
 
 class ShoesApp extends StatelessWidget {
   const ShoesApp({super.key});
