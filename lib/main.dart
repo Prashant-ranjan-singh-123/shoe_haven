@@ -8,7 +8,6 @@ void main() {
   runApp(const ShoesApp());
 }
 
-
 class ShoesApp extends StatelessWidget {
   const ShoesApp({super.key});
   @override
